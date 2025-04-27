@@ -143,7 +143,7 @@ def add_handlers():
         "remove_from_queue": (
             remove_from_queue,
             BotCommands.ForceStartCommand,
-            CustomFilters.authorized,
+            filters.private,
         ),
         "count_node": (
             count_node,
@@ -208,17 +208,17 @@ def add_handlers():
         "ping": (
             ping,
             BotCommands.PingCommand,
-            CustomFilters.authorized,
+            filters.private,
         ),
         "bot_help": (
             bot_help,
             BotCommands.HelpCommand,
-            CustomFilters.authorized,
+            filters.private,
         ),
         "bot_stats": (
             bot_stats,
             BotCommands.StatsCommand,
-            CustomFilters.authorized,
+            filters.private,
         ),
         "check_scheduled_deletions": (
             check_scheduled_deletions,
@@ -228,12 +228,12 @@ def add_handlers():
         "task_status": (
             task_status,
             BotCommands.StatusCommand,
-            CustomFilters.authorized,
+            filters.private,
         ),
         "s": (
             task_status,
             BotCommands.StatusCommand,
-            CustomFilters.authorized,
+            filters.private,
         ),
         "statusall": (
             task_status,
@@ -243,7 +243,7 @@ def add_handlers():
         "sall": (
             task_status,
             BotCommands.StatusCommand,
-            CustomFilters.authorized,
+            filters.private,
         ),
         "torrent_search": (
             torrent_search,
@@ -258,17 +258,17 @@ def add_handlers():
         "send_user_settings": (
             send_user_settings,
             BotCommands.UserSetCommand,
-            CustomFilters.authorized,
+            filters.private,
         ),
         "ytdl": (
             ytdl,
             BotCommands.YtdlCommand,
-            CustomFilters.authorized,
+            filters.private,
         ),
         "ytdl_leech": (
             ytdl_leech,
             BotCommands.YtdlLeechCommand,
-            CustomFilters.authorized,
+            filters.private,
         ),
         #    "restart_sessions": (
         #        restart_sessions,
@@ -278,12 +278,12 @@ def add_handlers():
         "mediainfo": (
             mediainfo,
             BotCommands.MediaInfoCommand,
-            CustomFilters.authorized,
+            filters.private,
         ),
         "speedtest": (
             speedtest,
             BotCommands.SpeedTest,
-            CustomFilters.authorized,
+            filters.private,
         ),
         "broadcast": (
             broadcast,
@@ -308,12 +308,12 @@ def add_handlers():
         "font_styles_cmd": (
             font_styles_cmd,
             BotCommands.FontStylesCommand,
-            CustomFilters.authorized,
+            filters.private,
         ),
         "imdb_search": (
             imdb_search,
             BotCommands.IMDBCommand,
-            CustomFilters.authorized,
+            filters.private,
         ),
         "login": (
             login,
@@ -323,12 +323,12 @@ def add_handlers():
         "media_tools_settings": (
             media_tools_settings,
             BotCommands.MediaToolsCommand,
-            CustomFilters.authorized,
+            filters.private,
         ),
         "media_tools_help_cmd": (
             media_tools_help_cmd,
             BotCommands.MediaToolsHelpCommand,
-            CustomFilters.authorized,
+            filters.private,
         ),
         "gen_session": (
             handle_command,
