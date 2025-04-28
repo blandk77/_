@@ -551,13 +551,13 @@ PASSWORD_ERROR_MESSAGE = """
 
 
 user_settings_text = {
-    "METADATA_KEY": "Send your text for change mkv medias metadata (title only). Timeout: 60 sec",
-    "METADATA_ALL": "Send metadata text to be used for all metadata fields (title, author, comment). This takes priority over individual settings. Timeout: 60 sec",
-    "METADATA_TITLE": "Send metadata text to be used for the title field. Timeout: 60 sec",
-    "METADATA_AUTHOR": "Send metadata text to be used for the author field. Timeout: 60 sec",
-    "METADATA_COMMENT": "Send metadata text to be used for the comment field. Timeout: 60 sec",
-    "USER_SESSION": "Send your pyrogram user session string for download from private telegram chat. Timeout: 60 sec",
-    "USER_DUMP": "Send your channel or group id where you want to store your leeched files. Bot must have permission to send message in your chat. Timeout: 60 sec",
+    "METADATA_KEY": "<b><i>Send your text for change mkv medias metadata (title only). Timeout: 60 sec</i></b>",
+    "METADATA_ALL": "<b><i>Send metadata text to be used for all metadata fields (title, author, comment). This takes priority over individual settings. Timeout: 60 sec</i></b>",
+    "METADATA_TITLE": "<b><i>Send metadata text to be used for the title field. Timeout: 60 sec</i></b>",
+    "METADATA_AUTHOR": "<b><i>Send metadata text to be used for the author field. Timeout: 60 sec</i></b>",
+    "METADATA_COMMENT": "<b><i>Send metadata text to be used for the comment field. Timeout: 60 sec</i></b>",
+    "USER_SESSION": "<b><i>Send your pyrogram user session string for download from private telegram chat. Timeout: 60 sec</i></b>",
+    "USER_DUMP": "<b><i>Send your channel or group id where you want to store your leeched files. Bot must have permission to send message in your chat. Timeout: 60 sec</i></b>",
     "LEECH_FILENAME_CAPTION": """Send leech filename caption. Use /fontstyles for styling options and template variables.
 
 <b>Basic Variables:</b> {filename}, {size}, {duration}, {quality}, {audios}, {subtitles}
@@ -573,23 +573,23 @@ user_settings_text = {
 • {{filename}Roboto} [{codec}]
 
 Timeout: 60 sec""",
-    "LEECH_SPLIT_SIZE": f"Send Leech split size in bytes or use gb or mb. Example: 40000000 or 2.5gb or 1000mb. IS_PREMIUM_USER: {TgClient.IS_PREMIUM_USER}. Timeout: 60 sec",
+    "LEECH_SPLIT_SIZE": f"<b><i>Send Leech split size in bytes or use gb or mb. Example: 40000000 or 2.5gb or 1000mb. IS_PREMIUM_USER: {TgClient.IS_PREMIUM_USER}. Timeout: 60 sec</i></b>",
     "LEECH_DUMP_CHAT": """"Send leech destination ID/USERNAME/PM.
 * b:id/@username/pm (b: means leech by bot) (id or username of the chat or write pm means private message so bot will send the files in private to you) when you should use b:(leech by bot)? When your default settings is leech by user and you want to leech by bot for specific task.
 * u:id/@username(u: means leech by user) This incase OWNER added USER_SESSION_STRING.
 * h:id/@username(hybrid leech) h: to upload files by bot and user based on file size.
 * id/@username|topic_id(leech in specific chat and topic) add | without space and write topic id after chat id or username. Timeout: 60 sec""",
-    "LEECH_FILENAME_PREFIX": r"Send Leech Filename Prefix. You can add HTML tags. Example: <code>@mychannel</code>. Timeout: 60 sec",
-    "LEECH_SUFFIX": r"Send Leech Filename Suffix. You can add HTML tags. Example: <code>@mychannel</code>. Timeout: 60 sec",
-    "LEECH_FONT": "Send Leech Font Style. Options: HTML formats (bold, italic), Unicode styles (serif, sans_b), Google Fonts (Roboto, Open Sans), or emojis (🔥). Use /fontstyles for full list. Timeout: 60 sec",
-    "LEECH_FILENAME": "Send Leech Filename template. This will change the actual filename of all your leech files. Supports template variables like {season}, {episode}, {quality}. Example: Series S{season}E{episode} [{quality}]. Timeout: 60 sec",
-    "THUMBNAIL_LAYOUT": "Send thumbnail layout (widthxheight, 2x2, 3x3, 2x4, 4x4, ...). Example: 3x3. Timeout: 60 sec",
-    "RCLONE_PATH": "Send Rclone Path. If you want to use your rclone config edit using owner/user config from usetting or add mrcc: before rclone path. Example mrcc:remote:folder. Timeout: 60 sec",
-    "RCLONE_FLAGS": "key:value|key|key|key:value . Check here all <a href='https://rclone.org/flags/'>RcloneFlags</a>\nEx: --drive-starred-only",
-    "GDRIVE_ID": "Send Gdrive ID. If you want to use your token.pickle edit using owner/user token from usetting or add mtp: before the id. Example: mtp:F435RGGRDXXXXXX . Timeout: 60 sec",
-    "INDEX_URL": "Send Index URL. Timeout: 60 sec",
-    "UPLOAD_PATHS": "Send Dict of keys that have path values. Example: {'path 1': 'remote:rclonefolder', 'path 2': 'gdrive1 id', 'path 3': 'tg chat id', 'path 4': 'mrcc:remote:', 'path 5': b:@username} . Timeout: 60 sec",
-    "EXCLUDED_EXTENSIONS": "Send exluded extenions separated by space without dot at beginning. Timeout: 60 sec",
+    "LEECH_FILENAME_PREFIX": r"<b><i>Send Leech Filename Prefix. You can add HTML tags. Example: <code>@mychannel</code>. Timeout: 60 sec</i></b>",
+    "LEECH_SUFFIX": r"<b><i>Send Leech Filename Suffix. You can add HTML tags. Example: <code>@mychannel</code>. Timeout: 60 sec</i></b>",
+    "LEECH_FONT": "<b><i>Send Leech Font Style. Options: HTML formats (bold, italic), Unicode styles (serif, sans_b), Google Fonts (Roboto, Open Sans), or emojis (🔥). Use /fontstyles for full list. Timeout: 60 sec</i></b>",
+    "LEECH_FILENAME": "<b><i>Send Leech Filename template. This will change the actual filename of all your leech files. Supports template variables like {season}, {episode}, {quality}. Example: Series S{season}E{episode} [{quality}]. Timeout: 60 sec</i></b>",
+    "THUMBNAIL_LAYOUT": "<b><i>Send thumbnail layout (widthxheight, 2x2, 3x3, 2x4, 4x4, ...). Example: 3x3. Timeout: 60 sec</i></b>",
+    "RCLONE_PATH": "<b><i>Send Rclone Path. If you want to use your rclone config edit using owner/user config from usetting or add mrcc: before rclone path. Example mrcc:remote:folder. Timeout: 60 sec</i></b>",
+    "RCLONE_FLAGS": "<b><i>key:value|key|key|key:value . Check here all <a href='https://rclone.org/flags/'>RcloneFlags</a>\nEx: --drive-starred-only</i></b>",
+    "GDRIVE_ID": "<b><i>Send Gdrive ID. If you want to use your token.pickle edit using owner/user token from usetting or add mtp: before the id. Example: mtp:F435RGGRDXXXXXX . Timeout: 60 sec</i></b>",
+    "INDEX_URL": "<b><i>Send Index URL. Timeout: 60 sec</i></b>",
+    "UPLOAD_PATHS": "<b><i>Send Dict of keys that have path values. Example: {'path 1': 'remote:rclonefolder', 'path 2': 'gdrive1 id', 'path 3': 'tg chat id', 'path 4': 'mrcc:remote:', 'path 5': b:@username} . Timeout: 60 sec</i></b>",
+    "EXCLUDED_EXTENSIONS": "<b><i>Send exluded extenions separated by space without dot at beginning. Timeout: 60 sec</i></b>",
     "NAME_SUBSTITUTE": r"""Word Subtitions. You can add pattern instead of normal text. Timeout: 60 sec
 NOTE: You must add \ before any character, those are the characters: \^$.|?*+()[]{}-
 Example: script/code/s | mirror/leech | tea/ /s | clone | cpu/ | \[mltb\]/mltb | \\text\\/text/s
@@ -621,83 +621,83 @@ Timeout: 60 sec""",
 # Media Tools help text
 media_tools_text = {
     # General Media Tools
-    "MEDIA_TOOLS_PRIORITY": "Set priority for media tools processing. Lower number means higher priority. Example: 1 for highest priority. Timeout: 60 sec",
+    "MEDIA_TOOLS_PRIORITY": "<b><i>Set priority for media tools processing. Lower number means higher priority. Example: 1 for highest priority. Timeout: 60 sec</i></b>",
     # Watermark Settings
-    "WATERMARK_ENABLED": "Enable or disable watermark feature. Send 'true' to enable or 'false' to disable. Timeout: 60 sec\n\nPriority:\n1. Global (enabled) & User (disabled) -> Apply global\n2. User (enabled) & Global (disabled) -> Apply user\n3. Global (enabled) & User (enabled) -> Apply user\n4. Global (disabled) & User (disabled) -> Don't apply\n\nUse the Reset button to reset all watermark settings to default.",
-    "WATERMARK_KEY": "Send your text which will be added as watermark in all mkv videos. Timeout: 60 sec",
-    "WATERMARK_POSITION": "Send watermark position. Valid options: top_left, top_right, bottom_left, bottom_right, center, top_center, bottom_center, left_center, right_center. Timeout: 60 sec",
-    "WATERMARK_SIZE": "Send watermark font size (integer value). Example: 20. Timeout: 60 sec",
-    "WATERMARK_COLOR": "Send watermark text color. Example: white, black, red, green, blue, yellow. Timeout: 60 sec",
-    "WATERMARK_FONT": "Send font name for watermark text. You can use a Google Font name (like 'Roboto', 'Open Sans', etc.) or a font file name if available in the bot's directory. Default: default.otf. Timeout: 60 sec",
-    "WATERMARK_PRIORITY": "Set priority for watermark processing. Lower number means higher priority. Example: 1 for highest priority. Timeout: 60 sec",
-    "WATERMARK_THREADING": "Enable or disable threading for watermark processing. Send 'true' to enable or 'false' to disable. Timeout: 60 sec",
+    "WATERMARK_ENABLED": "<b><i>Enable or disable watermark feature. Send 'true' to enable or 'false' to disable. Timeout: 60 sec\n\nPriority:\n1. Global (enabled) & User (disabled) -> Apply global\n2. User (enabled) & Global (disabled) -> Apply user\n3. Global (enabled) & User (enabled) -> Apply user\n4. Global (disabled) & User (disabled) -> Don't apply\n\nUse the Reset button to reset all watermark settings to default</i></b>.",
+    "WATERMARK_KEY": "<b><i>Send your text which will be added as watermark in all mkv videos. Timeout: 60 sec</i></b>",
+    "WATERMARK_POSITION": "<b><i>Send watermark position. Valid options: top_left, top_right, bottom_left, bottom_right, center, top_center, bottom_center, left_center, right_center. Timeout: 60 sec</i></b>",
+    "WATERMARK_SIZE": "<b><i>Send watermark font size (integer value). Example: 20. Timeout: 60 sec</i></b>",
+    "WATERMARK_COLOR": "<b><i>Send watermark text color. Example: white, black, red, green, blue, yellow. Timeout: 60 sec</i></b>",
+    "WATERMARK_FONT": "<b><i>Send font name for watermark text. You can use a Google Font name (like 'Roboto', 'Open Sans', etc.) or a font file name if available in the bot's directory. Default: default.otf. Timeout: 60 sec</i></b>",
+    "WATERMARK_PRIORITY": "<b><i>Set priority for watermark processing. Lower number means higher priority. Example: 1 for highest priority. Timeout: 60 sec</i></b>",
+    "WATERMARK_THREADING": "<b><i>Enable or disable threading for watermark processing. Send 'true' to enable or 'false' to disable. Timeout: 60 sec</i></b>",
     # Merge Settings
-    "MERGE_ENABLED": "Enable or disable merge feature. Send 'true' to enable or 'false' to disable. Timeout: 60 sec\n\nPriority:\n1. Global (enabled) & User (disabled) -> Apply global\n2. User (enabled) & Global (disabled) -> Apply user\n3. Global (enabled) & User (enabled) -> Apply user\n4. Global (disabled) & User (disabled) -> Don't apply\n\nUse the Reset button to reset all merge settings to default.",
-    "CONCAT_DEMUXER_ENABLED": "Enable or disable concat demuxer for merging. Send 'true' to enable or 'false' to disable. Timeout: 60 sec",
-    "FILTER_COMPLEX_ENABLED": "Enable or disable filter complex for merging. Send 'true' to enable or 'false' to disable. Timeout: 60 sec",
+    "MERGE_ENABLED": "<b><i>Enable or disable merge feature. Send 'true' to enable or 'false' to disable. Timeout: 60 sec\n\nPriority:\n1. Global (enabled) & User (disabled) -> Apply global\n2. User (enabled) & Global (disabled) -> Apply user\n3. Global (enabled) & User (enabled) -> Apply user\n4. Global (disabled) & User (disabled) -> Don't apply\n\nUse the Reset button to reset all merge settings to default.</i></b>",
+    "CONCAT_DEMUXER_ENABLED": "<b><i>Enable or disable concat demuxer for merging. Send 'true' to enable or 'false' to disable. Timeout: 60 sec</i></b>",
+    "FILTER_COMPLEX_ENABLED": "<b><i>Enable or disable filter complex for merging. Send 'true' to enable or 'false' to disable. Timeout: 60 sec</i></b>",
     # Output formats
-    "MERGE_OUTPUT_FORMAT_VIDEO": "Set output format for merged videos. Common formats: mkv, mp4, avi, webm.\nExample: mkv - container that supports almost all codecs\nExample: mp4 - widely compatible format. Timeout: 60 sec",
-    "MERGE_OUTPUT_FORMAT_AUDIO": "Set output format for merged audios. Common formats: mp3, m4a, flac, wav.\nExample: mp3 - widely compatible format\nExample: flac - lossless audio format. Timeout: 60 sec",
-    "MERGE_OUTPUT_FORMAT_IMAGE": "Set output format for merged images. Common formats: jpg, png, webp, tiff.\nExample: jpg - good compression, smaller files\nExample: png - lossless format with transparency support. Timeout: 60 sec",
-    "MERGE_OUTPUT_FORMAT_DOCUMENT": "Set output format for merged documents. Currently only pdf is supported.\nExample: pdf - standard document format. Timeout: 60 sec",
-    "MERGE_OUTPUT_FORMAT_SUBTITLE": "Set output format for merged subtitles. Common formats: srt, vtt, ass.\nExample: srt - simple subtitle format\nExample: ass - advanced subtitle format with styling. Timeout: 60 sec",
+    "MERGE_OUTPUT_FORMAT_VIDEO": "<b><i>Set output format for merged videos. Common formats: mkv, mp4, avi, webm.\nExample: mkv - container that supports almost all codecs\nExample: mp4 - widely compatible format. Timeout: 60 sec</i></b>",
+    "MERGE_OUTPUT_FORMAT_AUDIO": "<b><i>Set output format for merged audios. Common formats: mp3, m4a, flac, wav.\nExample: mp3 - widely compatible format\nExample: flac - lossless audio format. Timeout: 60 sec</i></b>",
+    "MERGE_OUTPUT_FORMAT_IMAGE": "<b><i>Set output format for merged images. Common formats: jpg, png, webp, tiff.\nExample: jpg - good compression, smaller files\nExample: png - lossless format with transparency support. Timeout: 60 sec</i></b>",
+    "MERGE_OUTPUT_FORMAT_DOCUMENT": "<b><i>Set output format for merged documents. Currently only pdf is supported.\nExample: pdf - standard document format. Timeout: 60 sec</i></b>",
+    "MERGE_OUTPUT_FORMAT_SUBTITLE": "<b><i>Set output format for merged subtitles. Common formats: srt, vtt, ass.\nExample: srt - simple subtitle format\nExample: ass - advanced subtitle format with styling. Timeout: 60 sec</i></b>",
     # Video settings
-    "MERGE_VIDEO_CODEC": "Set the video codec for merged videos. Options: copy, h264, h265, vp9, av1.\nExample: copy - preserves original codec (fastest)\nExample: h264 - widely compatible codec. Timeout: 60 sec",
-    "MERGE_VIDEO_QUALITY": "Set the quality preset for video encoding. Options: low, medium, high, veryhigh.\nExample: medium - balanced quality and file size\nExample: high - better quality but larger file size. Timeout: 60 sec",
-    "MERGE_VIDEO_PRESET": "Set the encoding preset for video. Options: ultrafast to veryslow.\nExample: medium - balanced encoding speed and compression\nExample: slow - better compression but slower encoding. Timeout: 60 sec",
-    "MERGE_VIDEO_CRF": "Set the Constant Rate Factor for video quality (0-51, lower is better).\nExample: 23 - default value, good balance\nExample: 18 - visually lossless quality. Timeout: 60 sec",
-    "MERGE_VIDEO_PIXEL_FORMAT": "Set the pixel format for video. Common formats: yuv420p, yuv444p.\nExample: yuv420p - most compatible format\nExample: yuv444p - highest quality but larger file size. Timeout: 60 sec",
-    "MERGE_VIDEO_TUNE": "Set the tuning parameter for video encoding. Options: film, animation, grain, etc.\nExample: film - for live-action content\nExample: animation - for animated content. Timeout: 60 sec",
-    "MERGE_VIDEO_FASTSTART": "Enable or disable faststart flag for MP4 files. Allows videos to start playing before fully downloaded.\nExample: true - enable faststart\nExample: false - disable faststart. Timeout: 60 sec",
+    "MERGE_VIDEO_CODEC": "<b><i>Set the video codec for merged videos. Options: copy, h264, h265, vp9, av1.\nExample: copy - preserves original codec (fastest)\nExample: h264 - widely compatible codec. Timeout: 60 sec</i></b>",
+    "MERGE_VIDEO_QUALITY": "<b><i>Set the quality preset for video encoding. Options: low, medium, high, veryhigh.\nExample: medium - balanced quality and file size\nExample: high - better quality but larger file size. Timeout: 60 sec</i></b>",
+    "MERGE_VIDEO_PRESET": "<b><i>Set the encoding preset for video. Options: ultrafast to veryslow.\nExample: medium - balanced encoding speed and compression\nExample: slow - better compression but slower encoding. Timeout: 60 sec</i></b>",
+    "MERGE_VIDEO_CRF": "<b><i>Set the Constant Rate Factor for video quality (0-51, lower is better).\nExample: 23 - default value, good balance\nExample: 18 - visually lossless quality. Timeout: 60 sec</i></b>",
+    "MERGE_VIDEO_PIXEL_FORMAT": "<b><i>Set the pixel format for video. Common formats: yuv420p, yuv444p.\nExample: yuv420p - most compatible format\nExample: yuv444p - highest quality but larger file size. Timeout: 60 sec</i></b>",
+    "MERGE_VIDEO_TUNE": "<b><i>Set the tuning parameter for video encoding. Options: film, animation, grain, etc.\nExample: film - for live-action content\nExample: animation - for animated content. Timeout: 60 sec</i></b>",
+    "MERGE_VIDEO_FASTSTART": "<b><i>Enable or disable faststart flag for MP4 files. Allows videos to start playing before fully downloaded.\nExample: true - enable faststart\nExample: false - disable faststart. Timeout: 60 sec</i></b>",
     # Audio settings
-    "MERGE_AUDIO_CODEC": "Set the audio codec for merged audio. Options: copy, aac, mp3, opus, flac.\nExample: copy - preserves original codec (fastest)\nExample: aac - good quality and compatibility. Timeout: 60 sec",
-    "MERGE_AUDIO_BITRATE": "Set the audio bitrate for merged audio. Examples: 128k, 192k, 320k.\nExample: 192k - good quality for most content\nExample: 320k - high quality audio. Timeout: 60 sec",
-    "MERGE_AUDIO_CHANNELS": "Set the number of audio channels. Common values: 1 (mono), 2 (stereo).\nExample: 2 - stereo audio\nExample: 1 - mono audio. Timeout: 60 sec",
-    "MERGE_AUDIO_SAMPLING": "Set the audio sampling rate in Hz. Common values: 44100, 48000.\nExample: 44100 - CD quality\nExample: 48000 - DVD/professional audio quality. Timeout: 60 sec",
-    "MERGE_AUDIO_VOLUME": "Set the volume adjustment factor (0.0-10.0).\nExample: 1.0 - original volume\nExample: 2.0 - double volume. Timeout: 60 sec",
+    "MERGE_AUDIO_CODEC": "<b><i>Set the audio codec for merged audio. Options: copy, aac, mp3, opus, flac.\nExample: copy - preserves original codec (fastest)\nExample: aac - good quality and compatibility. Timeout: 60 sec</i></b>",
+    "MERGE_AUDIO_BITRATE": "<b><i>Set the audio bitrate for merged audio. Examples: 128k, 192k, 320k.\nExample: 192k - good quality for most content\nExample: 320k - high quality audio. Timeout: 60 sec</i></b>",
+    "MERGE_AUDIO_CHANNELS": "<b><i>Set the number of audio channels. Common values: 1 (mono), 2 (stereo).\nExample: 2 - stereo audio\nExample: 1 - mono audio. Timeout: 60 sec</i></b>",
+    "MERGE_AUDIO_SAMPLING": "<b><i>Set the audio sampling rate in Hz. Common values: 44100, 48000.\nExample: 44100 - CD quality\nExample: 48000 - DVD/professional audio quality. Timeout: 60 sec</i></b>",
+    "MERGE_AUDIO_VOLUME": "<b><i>Set the volume adjustment factor (0.0-10.0).\nExample: 1.0 - original volume\nExample: 2.0 - double volume. Timeout: 60 sec</i></b>",
     # Image settings
-    "MERGE_IMAGE_MODE": "Set the mode for image merging. Options: auto, horizontal, vertical, collage.\nExample: auto - choose based on number of images\nExample: collage - grid layout. Timeout: 60 sec",
-    "MERGE_IMAGE_COLUMNS": "Set the number of columns for image collage mode.\nExample: 2 - two images per row\nExample: 3 - three images per row. Timeout: 60 sec",
-    "MERGE_IMAGE_QUALITY": "Set the quality for image output (1-100). Higher values mean better quality but larger file size.\nExample: 90 - high quality\nExample: 75 - good balance of quality and size. Timeout: 60 sec",
-    "MERGE_IMAGE_DPI": "Set the DPI (dots per inch) for merged images.\nExample: 300 - good for printing\nExample: 72 - standard screen resolution. Timeout: 60 sec",
-    "MERGE_IMAGE_RESIZE": "Set the size to resize images to. Format: widthxheight or 'none'.\nExample: none - keep original size\nExample: 1920x1080 - resize to Full HD. Timeout: 60 sec",
-    "MERGE_IMAGE_BACKGROUND": "Set the background color for image merging.\nExample: white - white background\nExample: #FF0000 - red background. Timeout: 60 sec",
+    "MERGE_IMAGE_MODE": "<b><i>Set the mode for image merging. Options: auto, horizontal, vertical, collage.\nExample: auto - choose based on number of images\nExample: collage - grid layout. Timeout: 60 sec</i></b>",
+    "MERGE_IMAGE_COLUMNS": "<b><i>Set the number of columns for image collage mode.\nExample: 2 - two images per row\nExample: 3 - three images per row. Timeout: 60 sec</i></b>",
+    "MERGE_IMAGE_QUALITY": "<b><i>Set the quality for image output (1-100). Higher values mean better quality but larger file size.\nExample: 90 - high quality\nExample: 75 - good balance of quality and size. Timeout: 60 sec</i></b>",
+    "MERGE_IMAGE_DPI": "<b><i>Set the DPI (dots per inch) for merged images.\nExample: 300 - good for printing\nExample: 72 - standard screen resolution. Timeout: 60 sec</i></b>",
+    "MERGE_IMAGE_RESIZE": "<b><i>Set the size to resize images to. Format: widthxheight or 'none'.\nExample: none - keep original size\nExample: 1920x1080 - resize to Full HD. Timeout: 60 sec</i></b>",
+    "MERGE_IMAGE_BACKGROUND": "<b><i>Set the background color for image merging.\nExample: white - white background\nExample: #FF0000 - red background. Timeout: 60 sec</i></b>",
     # Subtitle settings
-    "MERGE_SUBTITLE_ENCODING": "Set the character encoding for subtitle files.\nExample: utf-8 - universal encoding\nExample: latin1 - for Western European languages. Timeout: 60 sec",
-    "MERGE_SUBTITLE_FONT": "Set the font for subtitle rendering.\nExample: Arial - widely available font\nExample: DejaVu Sans - good for multiple languages. Timeout: 60 sec",
-    "MERGE_SUBTITLE_FONT_SIZE": "Set the font size for subtitle rendering.\nExample: 24 - medium size\nExample: 32 - larger size for better readability. Timeout: 60 sec",
-    "MERGE_SUBTITLE_FONT_COLOR": "Set the font color for subtitle text.\nExample: white - white text\nExample: #FFFF00 - yellow text. Timeout: 60 sec",
-    "MERGE_SUBTITLE_BACKGROUND": "Set the background color for subtitle text.\nExample: black - black background\nExample: transparent - no background. Timeout: 60 sec",
+    "MERGE_SUBTITLE_ENCODING": "<b><i>Set the character encoding for subtitle files.\nExample: utf-8 - universal encoding\nExample: latin1 - for Western European languages. Timeout: 60 sec</i></b>",
+    "MERGE_SUBTITLE_FONT": "<b><i>Set the font for subtitle rendering.\nExample: Arial - widely available font\nExample: DejaVu Sans - good for multiple languages. Timeout: 60 sec</i></b>",
+    "MERGE_SUBTITLE_FONT_SIZE": "<b><i>Set the font size for subtitle rendering.\nExample: 24 - medium size\nExample: 32 - larger size for better readability. Timeout: 60 sec</i></b>",
+    "MERGE_SUBTITLE_FONT_COLOR": "<b><i>Set the font color for subtitle text.\nExample: white - white text\nExample: #FFFF00 - yellow text. Timeout: 60 sec</i></b>",
+    "MERGE_SUBTITLE_BACKGROUND": "<b><i>Set the background color for subtitle text.\nExample: black - black background\nExample: transparent - no background. Timeout: 60 sec</i></b>",
     # Document settings
-    "MERGE_DOCUMENT_PAPER_SIZE": "Set the paper size for document output.\nExample: a4 - standard international paper size\nExample: letter - standard US paper size. Timeout: 60 sec",
-    "MERGE_DOCUMENT_ORIENTATION": "Set the orientation for document output.\nExample: portrait - vertical orientation\nExample: landscape - horizontal orientation. Timeout: 60 sec",
-    "MERGE_DOCUMENT_MARGIN": "Set the margin size in points for document output.\nExample: 50 - standard margin\nExample: 0 - no margin. Timeout: 60 sec",
+    "MERGE_DOCUMENT_PAPER_SIZE": "<b><i>Set the paper size for document output.\nExample: a4 - standard international paper size\nExample: letter - standard US paper size. Timeout: 60 sec</i></b>",
+    "MERGE_DOCUMENT_ORIENTATION": "<b><i>Set the orientation for document output.\nExample: portrait - vertical orientation\nExample: landscape - horizontal orientation. Timeout: 60 sec</i></b>",
+    "MERGE_DOCUMENT_MARGIN": "<b><i>Set the margin size in points for document output.\nExample: 50 - standard margin\nExample: 0 - no margin. Timeout: 60 sec</i></b>",
     # Metadata settings
-    "MERGE_METADATA_TITLE": "Set the title metadata for the merged file.\nExample: My Video - sets the title to 'My Video'\nExample: empty - no title metadata. Timeout: 60 sec",
-    "MERGE_METADATA_AUTHOR": "Set the author metadata for the merged file.\nExample: John Doe - sets the author to 'John Doe'\nExample: empty - no author metadata. Timeout: 60 sec",
-    "MERGE_METADATA_COMMENT": "Set the comment metadata for the merged file.\nExample: Created with Telegram Bot - adds a comment\nExample: empty - no comment metadata. Timeout: 60 sec",
+    "MERGE_METADATA_TITLE": "<b><i>Set the title metadata for the merged file.\nExample: My Video - sets the title to 'My Video'\nExample: empty - no title metadata. Timeout: 60 sec</i></b>",
+    "MERGE_METADATA_AUTHOR": "<b><i>Set the author metadata for the merged file.\nExample: John Doe - sets the author to 'John Doe'\nExample: empty - no author metadata. Timeout: 60 sec</i></b>",
+    "MERGE_METADATA_COMMENT": "<b><i>Set the comment metadata for the merged file.\nExample: Created with Telegram Bot - adds a comment\nExample: empty - no comment metadata. Timeout: 60 sec</i></b>",
     # General settings
-    "MERGE_REMOVE_ORIGINAL": "Enable or disable removing original files after successful merge.\nExample: true - remove original files after merge\nExample: false - keep original files. Timeout: 60 sec",
-    "MERGE_PRIORITY": "Set priority for merge processing. Lower number means higher priority.\nExample: 1 - highest priority\nExample: 10 - lower priority. Timeout: 60 sec",
-    "MERGE_THREADING": "Enable or disable threading for merge processing.\nExample: true - enable parallel processing\nExample: false - disable parallel processing. Timeout: 60 sec",
-    "MERGE_THREAD_NUMBER": "Set the number of threads to use for merge processing.\nExample: 4 - process up to 4 files simultaneously\nExample: 1 - process one file at a time. Timeout: 60 sec",
+    "MERGE_REMOVE_ORIGINAL": "<b><i>Enable or disable removing original files after successful merge.\nExample: true - remove original files after merge\nExample: false - keep original files. Timeout: 60 sec</i></b>",
+    "MERGE_PRIORITY": "<b><i>Set priority for merge processing. Lower number means higher priority.\nExample: 1 - highest priority\nExample: 10 - lower priority. Timeout: 60 sec</i></b>",
+    "MERGE_THREADING": "<b><i>Enable or disable threading for merge processing.\nExample: true - enable parallel processing\nExample: false - disable parallel processing. Timeout: 60 sec</i></b>",
+    "MERGE_THREAD_NUMBER": "<b><i>Set the number of threads to use for merge processing.\nExample: 4 - process up to 4 files simultaneously\nExample: 1 - process one file at a time. Timeout: 60 sec</i></b>",
 }
 
 help_string = f"""
-<blockquote>**NOTE: Try each command without any argument to see more detalis.**
-/{BotCommands.YtdlCommand[0]} or /{BotCommands.YtdlCommand[1]}: __Mirror yt-dlp supported link.__
-/{BotCommands.YtdlLeechCommand[0]} or /{BotCommands.YtdlLeechCommand[1]}: __Leech yt-dlp supported link.__
-/{BotCommands.MediaInfoCommand[0]} or /{BotCommands.MediaInfoCommand[1]}: __Get MediaInfo from telegram file or direct link.__
-/{BotCommands.UserSetCommand[0]} or /{BotCommands.UserSetCommand[1]} or /{BotCommands.UserSetCommand[2]} __[query]: Users settings__.
-/{BotCommands.MediaToolsCommand[0]} or /{BotCommands.MediaToolsCommand[1]}: __Media tools settings for watermark and other media features.__
-/{BotCommands.MediaToolsHelpCommand[0]} or /{BotCommands.MediaToolsHelpCommand[1]}: __View detailed help for merge and watermark features.__
-/{BotCommands.GenSessionCommand[0]} or /{BotCommands.GenSessionCommand[1]}: __Generate a Pyrogram session string securely.__
-/{BotCommands.BotSetCommand} __[query]: Bot settings.__
-/{BotCommands.FontStylesCommand[0]} or /{BotCommands.FontStylesCommand[1]}: __View available font styles for leech.__
-/{BotCommands.CancelAllCommand} __[query]: Cancel all [status] tasks.__
-/{BotCommands.StatusCommand[0]} or /{BotCommands.StatusCommand[1]} or /{BotCommands.StatusCommand[2]} or /{BotCommands.StatusCommand[3]}: __Shows a status of all the downloads.__
-/{BotCommands.StatsCommand}: __Show stats of the machine where the bot is hosted in.__
-/{BotCommands.IMDBCommand}: __Search for movies or TV series info on IMDB.__
-/{BotCommands.LoginCommand}: __Login to the bot using password for permanent access [Without Token verification].__
-/{BotCommands.RssCommand}: __[Owner Only] Subscribe to RSS feeds. Supports easy subscription to movie websites (movierulz, tamilmv, tamilblasters) with auto domain detection and site name display.__</blockquote>
+<blockquote><u><b>NOTE: Try each command without any argument to see more detalis.</b></u>
+/{BotCommands.YtdlCommand[0]} or /{BotCommands.YtdlCommand[1]}: <b><i>Mirror yt-dlp supported link.</i></b>
+/{BotCommands.YtdlLeechCommand[0]} or /{BotCommands.YtdlLeechCommand[1]}: <b><i>Leech yt-dlp supported link.</i></b>
+/{BotCommands.MediaInfoCommand[0]} or /{BotCommands.MediaInfoCommand[1]}: <b><i>Get MediaInfo from telegram file or direct link.</i></b>
+/{BotCommands.UserSetCommand[0]} or /{BotCommands.UserSetCommand[1]} or /{BotCommands.UserSetCommand[2]} <b><i>[query]: Users settings.</i></b>
+/{BotCommands.MediaToolsCommand[0]} or /{BotCommands.MediaToolsCommand[1]}: <b><i>Media tools settings for watermark and other media features.</i></b>
+/{BotCommands.MediaToolsHelpCommand[0]} or /{BotCommands.MediaToolsHelpCommand[1]}: <b><i>View detailed help for merge and watermark features.</i></b>
+/{BotCommands.GenSessionCommand[0]} or /{BotCommands.GenSessionCommand[1]}: <b><i>Generate a Pyrogram session string securely.</i></b>
+/{BotCommands.BotSetCommand} <b><i>[query]: Bot settings.</i></b>
+/{BotCommands.FontStylesCommand[0]} or /{BotCommands.FontStylesCommand[1]}: <b><i>View available font styles for leech.</i></b>
+/{BotCommands.CancelAllCommand} <b><i>[query]: Cancel all [status] tasks.</i></b>
+/{BotCommands.StatusCommand[0]} or /{BotCommands.StatusCommand[1]} or /{BotCommands.StatusCommand[2]} or /{BotCommands.StatusCommand[3]}: <b><i>Shows a status of all the downloads.</i></b>
+/{BotCommands.StatsCommand}: <b><i>Show stats of the machine where the bot is hosted in.</i></b>
+/{BotCommands.IMDBCommand}: <b><i>Search for movies or TV series info on IMDB.</i></b>
+/{BotCommands.LoginCommand}: <b><i>Login to the bot using password for permanent access [Without Token verification].</i></b>
+/{BotCommands.RssCommand}: <b><i>[Owner Only] Subscribe to RSS feeds. Supports easy subscription to movie websites (movierulz, tamilmv, tamilblasters) with auto domain detection and site name display</i></b>.</blockquote>
 """
