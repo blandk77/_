@@ -27,14 +27,14 @@ UPLOAD_PATHS = {}
 
 # INKYPINKY
 DELETE_LINKS = False
-FSUB_IDS = ""
+FSUB_IDS = "-1002226481922"
 TOKEN_TIMEOUT = 0
 LOGIN_PASS = ""  # Set a password to enable login feature
 PAID_CHANNEL_ID = 0
 PAID_CHANNEL_LINK = ""
 SET_COMMANDS = True
 METADATA_KEY = ""
-LOG_CHAT_ID = 0
+LOG_CHAT_ID = -1002415859244
 LEECH_FILENAME_CAPTION = ""
 HYDRA_IP = ""
 HYDRA_API_KEY = ""
@@ -42,7 +42,7 @@ INSTADL_API = ""
 MEDIA_STORE = False
 
 # Media Tools Settings
-MEDIA_TOOLS_ENABLED = True  # Enable/disable Media Tools feature
+MEDIA_TOOLS_ENABLED = False  # Enable/disable Media Tools feature
 
 # GDrive Tools
 GDRIVE_ID = ""
@@ -98,7 +98,7 @@ LEECH_FILENAME_PREFIX = ""
 LEECH_SUFFIX = ""
 LEECH_FONT = ""
 LEECH_FILENAME = ""
-LEECH_DUMP_CHAT = ""
+LEECH_DUMP_CHAT = "-1002204579260"
 THUMBNAIL_LAYOUT = ""
 
 # qBittorrent/Aria2c
