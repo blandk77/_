@@ -5,7 +5,7 @@ TELEGRAM_API = 27394279
 TELEGRAM_HASH = "90a9aa4c31afa3750da5fd686c410851"
 
 # SEMI-REQUIRED, WE SUGGEST TO FILL IT FROM MONGODB
-DATABASE_URL = ""
+DATABASE_URL = "mongodb+srv://python21java:8ZFGYMKJCqAPwsiO@filestore.f876hjv.mongodb.net/?retryWrites=true&w=majority&appName=Filestore"
 
 # OPTIONAL CONFIG
 TG_PROXY = {"scheme": "socks5", "hostname": "45.140.143.77", "port": 18080, "username": "", "password": ""}
