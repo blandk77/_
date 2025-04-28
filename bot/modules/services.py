@@ -30,9 +30,12 @@ async def start(client, message):
     sbutton = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("Updates", url="https://t.me/The_TGguy"),
-                InlineKeyboardButton("Owner", url="t.me/Itsme123i")
-            ]  
+                InlineKeyboardButton("📢 𝐔𝐩𝐝𝐚𝐭𝐞𝐬 📢", url="https://t.me/The_TGguy"),
+                InlineKeyboardButton("❄️ 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 ❄️", url="t.me/Itsme123i")
+            ]
+            [
+            InlineKeyboardButton("📜 𝐒𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝 𝐬𝐢𝐭𝐞𝐬 📜", url="https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md")
+            ]
         ]
     )    
     if len(message.command) > 1 and message.command[1] == "private":
