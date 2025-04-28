@@ -2,45 +2,11 @@ from bot.core.aeon_client import TgClient
 from bot.helper.telegram_helper.bot_commands import BotCommands
 
 nsfw_keywords = [
-    "porn",
-    "onlyfans",
-    "nsfw",
-    "Brazzers",
-    "adult",
-    "xnxx",
-    "xvideos",
-    "nsfwcherry",
-    "hardcore",
-    "Pornhub",
-    "xvideos2",
-    "youporn",
-    "pornrip",
-    "playboy",
-    "hentai",
-    "erotica",
-    "blowjob",
-    "redtube",
-    "stripchat",
-    "camgirl",
-    "nude",
-    "fetish",
-    "cuckold",
-    "orgy",
-    "horny",
-    "swingers",
-    "ullu",
+    "rape",
+    "child porn",
 ]
 
-mirror = """<b>Send link along with command line or </b>
-
-/cmd link
-
-<b>By replying to link/file</b>:
-
-/cmd -n new name -e -up upload destination
-
-<b>NOTE:</b>
-1. Commands that start with <b>qb</b> are ONLY for torrents."""
+mirror = """<i><b>Mirror Disabled in the bot</b></i>"""
 
 yt = """<b>Send link along with command line</b>:
 
@@ -51,8 +17,7 @@ yt = """<b>Send link along with command line</b>:
 Check here all supported <a href='https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md'>SITES</a>
 Check all yt-dlp api options from this <a href='https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/YoutubeDL.py#L212'>FILE</a> or use this <a href='https://t.me/mltb_official_channel/177'>script</a> to convert cli arguments to api options."""
 
-clone = """Send Gdrive|Gdot|Filepress|Filebee|Appdrive|Gdflix link or rclone path along with command or by replying to the link/rc_path by command.
-Use -sync to use sync method in rclone. Example: /cmd rcl/rclone_path -up rcl/rclone_path/rc -sync"""
+clone = """<blockquote><i><b>Clone Disabled in the bot</b></i>"""
 
 new_name = """<b>New Name</b>: -n
 
@@ -172,17 +137,7 @@ By Reply:
 if u have link(folder) have splitted files:
 /cmd link -j"""
 
-tg_links = """<b>TG Links</b>:
-
-Treat links like any direct link
-Some links need user access so you must add USER_SESSION_STRING for it.
-Three types of links:
-Public: https://t.me/channel_name/message_id
-Private: tg://openmessage?user_id=xxxxxx&message_id=xxxxx
-Super: https://t.me/c/channel_id/message_id
-Range: https://t.me/channel_name/first_message_id-last_message_id
-Range Example: tg://openmessage?user_id=xxxxxx&message_id=555-560 or https://t.me/channel_name/100-150
-Note: Range link will work only by replying cmd to it"""
+tg_links = """<i><b>Disabled in the bot</b></i>"""
 
 sample_video = """<b>Sample Video</b>: -sv
 
@@ -196,11 +151,7 @@ Create screenshots for one video or folder of videos.
 /cmd -ss (it will take the default values which is 10 photos).
 You can control this value. Example: /cmd -ss 6."""
 
-seed = """<b>Bittorrent seed</b>: -d
-
-/cmd link -d ratio:seed_time or by replying to file/link
-To specify ratio and seed time add -d ratio:time.
-Example: -d 0.7:10 (ratio and time) or -d 0.7 (only ratio) or -d :10 (only time) where time in minutes"""
+seed = """<i><b>Disabled in the bot</b></i>"""
 
 zip_arg = """<b>Zip</b>: -z password
 
@@ -276,7 +227,7 @@ leech_filename = """<b>Leech Filename</b>:
 
 Set a global filename template for all your leech files. The template supports dynamic variables like {season}, {episode}, and {quality}.
 
-Example: Naruto S{season} E{episode} Q{quality}.mkv
+Example: One Piece S{season} E{episode} Q{quality}.mkv
 
 This will rename all files to follow this pattern, automatically replacing the variables with the actual values from each file.
 
@@ -733,34 +684,20 @@ media_tools_text = {
 }
 
 help_string = f"""
-NOTE: Try each command without any argument to see more detalis.
-/{BotCommands.MirrorCommand[0]} or /{BotCommands.MirrorCommand[1]}: Start mirroring to cloud.
-/{BotCommands.JdMirrorCommand[0]} or /{BotCommands.JdMirrorCommand[1]}: Start Mirroring to cloud using JDownloader.
-/{BotCommands.NzbMirrorCommand[0]} or /{BotCommands.NzbMirrorCommand[1]}: Start Mirroring to cloud using Sabnzbd.
-/{BotCommands.YtdlCommand[0]} or /{BotCommands.YtdlCommand[1]}: Mirror yt-dlp supported link.
-/{BotCommands.LeechCommand[0]} or /{BotCommands.LeechCommand[1]}: Start leeching to Telegram. If helper bots are configured, hyper download will be used for faster downloads.
-/{BotCommands.JdLeechCommand[0]} or /{BotCommands.JdLeechCommand[1]}: Start leeching using JDownloader.
-/{BotCommands.NzbLeechCommand[0]} or /{BotCommands.NzbLeechCommand[1]}: Start leeching using Sabnzbd.
-/{BotCommands.YtdlLeechCommand[0]} or /{BotCommands.YtdlLeechCommand[1]}: Leech yt-dlp supported link.
-/{BotCommands.CloneCommand} [drive_url]: Copy file/folder to Google Drive.
-/{BotCommands.MediaInfoCommand[0]} or /{BotCommands.MediaInfoCommand[1]}: Get MediaInfo from telegram file or direct link.
-/{BotCommands.CountCommand} [drive_url]: Count file/folder of Google Drive.
-/{BotCommands.DeleteCommand} [drive_url]: Delete file/folder from Google Drive (Only Owner & Sudo).
-/{BotCommands.UserSetCommand[0]} or /{BotCommands.UserSetCommand[1]} or /{BotCommands.UserSetCommand[2]} [query]: Users settings.
-/{BotCommands.MediaToolsCommand[0]} or /{BotCommands.MediaToolsCommand[1]}: Media tools settings for watermark and other media features.
-/{BotCommands.MediaToolsHelpCommand[0]} or /{BotCommands.MediaToolsHelpCommand[1]}: View detailed help for merge and watermark features.
-/{BotCommands.GenSessionCommand[0]} or /{BotCommands.GenSessionCommand[1]}: Generate a Pyrogram session string securely.
-/{BotCommands.BotSetCommand} [query]: Bot settings.
-/{BotCommands.FontStylesCommand[0]} or /{BotCommands.FontStylesCommand[1]}: View available font styles for leech.
-/{BotCommands.SelectCommand}: Select files from torrents by gid or reply.
-/{BotCommands.ForceStartCommand[0]} or /{BotCommands.ForceStartCommand[1]} [gid]: Force start task by gid or reply.
-/{BotCommands.CancelAllCommand} [query]: Cancel all [status] tasks.
-/{BotCommands.ListCommand} [query]: Search in Google Drive(s).
-/{BotCommands.SearchCommand} [query]: Search for torrents with API.
-/{BotCommands.StatusCommand[0]} or /{BotCommands.StatusCommand[1]} or /{BotCommands.StatusCommand[2]} or /{BotCommands.StatusCommand[3]}: Shows a status of all the downloads.
-/{BotCommands.StatsCommand}: Show stats of the machine where the bot is hosted in.
-/{BotCommands.IMDBCommand}: Search for movies or TV series info on IMDB.
-/{BotCommands.CheckDeletionsCommand[0]} or /{BotCommands.CheckDeletionsCommand[1]}: Check and manage scheduled message deletions.
-/{BotCommands.LoginCommand}: Login to the bot using password for permanent access.
-/{BotCommands.RssCommand}: [Owner Only] Subscribe to RSS feeds. Supports easy subscription to movie websites (movierulz, tamilmv, tamilblasters) with auto domain detection and site name display.
+**NOTE: Try each command without any argument to see more detalis.**
+/{BotCommands.YtdlCommand[0]} or /{BotCommands.YtdlCommand[1]}: __Mirror yt-dlp supported link.__
+/{BotCommands.YtdlLeechCommand[0]} or /{BotCommands.YtdlLeechCommand[1]}: __Leech yt-dlp supported link.__
+/{BotCommands.MediaInfoCommand[0]} or /{BotCommands.MediaInfoCommand[1]}: __Get MediaInfo from telegram file or direct link.__
+/{BotCommands.UserSetCommand[0]} or /{BotCommands.UserSetCommand[1]} or /{BotCommands.UserSetCommand[2]} __[query]: Users settings__.
+/{BotCommands.MediaToolsCommand[0]} or /{BotCommands.MediaToolsCommand[1]}: __Media tools settings for watermark and other media features.__
+/{BotCommands.MediaToolsHelpCommand[0]} or /{BotCommands.MediaToolsHelpCommand[1]}: __View detailed help for merge and watermark features.__
+/{BotCommands.GenSessionCommand[0]} or /{BotCommands.GenSessionCommand[1]}: __Generate a Pyrogram session string securely.__
+/{BotCommands.BotSetCommand} __[query]: Bot settings.__
+/{BotCommands.FontStylesCommand[0]} or /{BotCommands.FontStylesCommand[1]}: __View available font styles for leech.__
+/{BotCommands.CancelAllCommand} __[query]: Cancel all [status] tasks.__
+/{BotCommands.StatusCommand[0]} or /{BotCommands.StatusCommand[1]} or /{BotCommands.StatusCommand[2]} or /{BotCommands.StatusCommand[3]}: __Shows a status of all the downloads.__
+/{BotCommands.StatsCommand}: __Show stats of the machine where the bot is hosted in.__
+/{BotCommands.IMDBCommand}: __Search for movies or TV series info on IMDB.__
+/{BotCommands.LoginCommand}: __Login to the bot using password for permanent access [Without Token verification].__
+/{BotCommands.RssCommand}: __[Owner Only] Subscribe to RSS feeds. Supports easy subscription to movie websites (movierulz, tamilmv, tamilblasters) with auto domain detection and site name display.__
 """
