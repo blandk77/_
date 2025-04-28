@@ -24,15 +24,17 @@ from bot.helper.telegram_helper.message_utils import (
 
 @new_task
 async def start(client, message):
-        help_command = f"/{BotCommands.HelpCommand}"
-        start_string = "Hello there boss!"
+    help_command = f"/{BotCommands.HelpCommand}"
+    start_string = "Hello there boss!"
     unauth_start = "who are you??"
-        sbutton = InlineKeyboardMarkup(
+    sbutton = InlineKeyboardMarkup(
+        [
             [
-                [InlineKeyboardButton("Updates", url="https://t.me/The_TGguy"),
-                 InlineKeyboardButton("Owner", url="t.me/Itsme123i")]  
-            ]
-        )    
+                InlineKeyboardButton("Updates", url="https://t.me/The_TGguy"),
+                InlineKeyboardButton("Owner", url="t.me/Itsme123i")
+            ]  
+        ]
+    )    
     if len(message.command) > 1 and message.command[1] == "private":
         await delete_message(message)
     elif len(message.command) > 1 and message.command[1] == "gensession":
