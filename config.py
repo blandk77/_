@@ -85,8 +85,8 @@ USENET_SERVERS = [
 ]
 
 # Update
-UPSTREAM_REPO = "https://github.com/blandk77/_"
-UPSTREAM_BRANCH = "beta"
+UPSTREAM_REPO = ""
+UPSTREAM_BRANCH = ""
 
 # Leech
 LEECH_SPLIT_SIZE = 0
