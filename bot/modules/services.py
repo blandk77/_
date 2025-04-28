@@ -4,7 +4,7 @@ from time import monotonic, time
 from uuid import uuid4
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiofiles import open as aiopen
-from bot import LOGGER, user_data
+from bot import LOGGER, user_data, bot_start_time
 from bot.core.aeon_client import TgClient
 from bot.core.config_manager import Config
 from bot.helper.ext_utils.bot_utils import new_task, update_user_ldata
@@ -25,8 +25,9 @@ from bot.helper.telegram_helper.message_utils import (
 @new_task
 async def start(client, message):
     help_command = f"/{BotCommands.HelpCommand}"
-    start_string = "𝙷𝚎𝚕𝚕𝚘 𝚝𝚑𝚎𝚛𝚎 boss!\n\n𝐈'𝐦 𝐚𝐧 𝐚𝐝𝐯𝐚𝐧𝐜𝐞 𝐘𝐭𝐝𝐥 𝐛𝐨𝐭 𝐜𝐫𝐞𝐚𝐭𝐞𝐝 𝐛𝐲 <a href="http://t.me/The_TGguy">𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐆𝐮𝐲!!</a>. 𝐈 𝐜𝐚𝐧 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐖𝐞𝐛𝐬𝐢𝐭𝐞𝐬 𝐰𝐡𝐢𝐜𝐡 𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐬 𝐲𝐭𝐝𝐥! 𝐂𝐡𝐞𝐜𝐤 𝐭𝐡𝐞 𝐛𝐞𝐥𝐨𝐰 𝐛𝐮𝐭𝐭𝐨𝐧 𝐟𝐨𝐫 𝐭𝐡𝐞 𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝 𝐬𝐢𝐭𝐞𝐬\n\n<blockquote>Dᴏᴡɴʟᴏᴀᴅɪɴɢ 18+ sᴜᴄʜ ᴀs Pᴏʀɴ, ᴜʟʟᴜ ᴀʀᴇ ᴀʟʟᴏᴡᴇᴅ (ɴᴏ R@ᴘᴇ ᴏʀ ᴄᴘ, ɪғ ғᴏᴜɴᴅ ᴘᴇʀᴍᴀɴᴇɴᴛ ʙᴀɴ 🚫)</blockquote>\n𝘉𝘰𝘵 𝘶𝘱𝘵𝘪𝘮𝘦: ⏰"
-    unauth_start = "𝙷𝚎𝚕𝚕𝚘 𝚝𝚑𝚎𝚛𝚎!\n\n𝐈'𝐦 𝐚𝐧 𝐚𝐝𝐯𝐚𝐧𝐜𝐞 𝐘𝐭𝐝𝐥 𝐛𝐨𝐭 𝐜𝐫𝐞𝐚𝐭𝐞𝐝 𝐛𝐲 <a href='http://t.me/The_TGguy'>𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐆𝐮𝐲!!</a>. 𝐈 𝐜𝐚𝐧 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐖𝐞𝐛𝐬𝐢𝐭𝐞𝐬 𝐰𝐡𝐢𝐜𝐡 𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐬 𝐲𝐭𝐝𝐥! 𝐂𝐡𝐞𝐜𝐤 𝐭𝐡𝐞 𝐛𝐞𝐥𝐨𝐰 𝐛𝐮𝐭𝐭𝐨𝐧 𝐟𝐨𝐫 𝐭𝐡𝐞 𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝 𝐬𝐢𝐭𝐞𝐬\n\n<blockquote>Dᴏᴡɴʟᴏᴀᴅɪɴɢ 18+ sᴜᴄʜ ᴀs Pᴏʀɴ, ᴜʟʟᴜ ᴀʀᴇ ᴀʟʟᴏᴡᴇᴅ (ɴᴏ R@ᴘᴇ ᴏʀ ᴄᴘ, ɪғ ғᴏᴜɴᴅ ᴘᴇʀᴍᴀɴᴇɴᴛ ʙᴀɴ 🚫)</blockquote>\n𝘉𝘰𝘵 𝘶𝘱𝘵𝘪𝘮𝘦: ⏰"
+    uptime = get_readable_time(time() - bot_start_time)
+    start_string = "𝙷𝚎𝚕𝚕𝚘 𝚝𝚑𝚎𝚛𝚎 boss!\n\n𝐈'𝐦 𝐚𝐧 𝐚𝐝𝐯𝐚𝐧𝐜𝐞 𝐘𝐭𝐝𝐥 𝐛𝐨𝐭 𝐜𝐫𝐞𝐚𝐭𝐞𝐝 𝐛𝐲 <a href='http://t.me/The_TGguy'>𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐆𝐮𝐲!!</a>. 𝐈 𝐜𝐚𝐧 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐖𝐞𝐛𝐬𝐢𝐭𝐞𝐬 𝐰𝐡𝐢𝐜𝐡 𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐬 𝐲𝐭𝐝𝐥! 𝐂𝐡𝐞𝐜𝐤 𝐭𝐡𝐞 𝐛𝐞𝐥𝐨𝐰 𝐛𝐮𝐭𝐭𝐨𝐧 𝐟𝐨𝐫 𝐭𝐡𝐞 𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝 𝐬𝐢𝐭𝐞𝐬\n\n<blockquote>Dᴏᴡɴʟᴏᴀᴅɪɴɢ 18+ sᴜᴄʜ ᴀs Pᴏʀɴ, ᴜʟʟᴜ ᴀʀᴇ ᴀʟʟᴏᴡᴇᴅ (ɴᴏ R@ᴘᴇ ᴏʀ ᴄᴘ, ɪғ ғᴏᴜɴᴅ ᴘᴇʀᴍᴀɴᴇɴᴛ ʙᴀɴ 🚫)</blockquote>\n𝘉𝘰𝘵 𝘶𝘱𝘵𝘪𝘮𝘦: ⏰{uptime}"
+    unauth_start = "𝙷𝚎𝚕𝚕𝚘 𝚝𝚑𝚎𝚛𝚎!\n\n𝐈'𝐦 𝐚𝐧 𝐚𝐝𝐯𝐚𝐧𝐜𝐞 𝐘𝐭𝐝𝐥 𝐛𝐨𝐭 𝐜𝐫𝐞𝐚𝐭𝐞𝐝 𝐛𝐲 <a href='http://t.me/The_TGguy'>𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐆𝐮𝐲!!</a>. 𝐈 𝐜𝐚𝐧 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐖𝐞𝐛𝐬𝐢𝐭𝐞𝐬 𝐰𝐡𝐢𝐜𝐡 𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐬 𝐲𝐭𝐝𝐥! 𝐂𝐡𝐞𝐜𝐤 𝐭𝐡𝐞 𝐛𝐞𝐥𝐨𝐰 𝐛𝐮𝐭𝐭𝐨𝐧 𝐟𝐨𝐫 𝐭𝐡𝐞 𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝 𝐬𝐢𝐭𝐞𝐬\n\n<blockquote>Dᴏᴡɴʟᴏᴀᴅɪɴɢ 18+ sᴜᴄʜ ᴀs Pᴏʀɴ, ᴜʟʟᴜ ᴀʀᴇ ᴀʟʟᴏᴡᴇᴅ (ɴᴏ R@ᴘᴇ ᴏʀ ᴄᴘ, ɪғ ғᴏᴜɴᴅ ᴘᴇʀᴍᴀɴᴇɴᴛ ʙᴀɴ 🚫)</blockquote>\n𝘉𝘰𝘵 𝘶𝘱𝘵𝘪𝘮𝘦: ⏰{uptime}"
     sbutton = InlineKeyboardMarkup(
         [
             [
