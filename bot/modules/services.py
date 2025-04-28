@@ -25,8 +25,8 @@ from bot.helper.telegram_helper.message_utils import (
 @new_task
 async def start(client, message):
     help_command = f"/{BotCommands.HelpCommand}"
-    start_string = "Hello there boss!"
-    unauth_start = "who are you??"
+    start_string = "𝙷𝚎𝚕𝚕𝚘 𝚝𝚑𝚎𝚛𝚎 boss!\n\n𝐈'𝐦 𝐚𝐧 𝐚𝐝𝐯𝐚𝐧𝐜𝐞 𝐘𝐭𝐝𝐥 𝐛𝐨𝐭 𝐜𝐫𝐞𝐚𝐭𝐞𝐝 𝐛𝐲 <a href="http://t.me/The_TGguy">𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐆𝐮𝐲!!</a>. 𝐈 𝐜𝐚𝐧 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐖𝐞𝐛𝐬𝐢𝐭𝐞𝐬 𝐰𝐡𝐢𝐜𝐡 𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐬 𝐲𝐭𝐝𝐥! 𝐂𝐡𝐞𝐜𝐤 𝐭𝐡𝐞 𝐛𝐞𝐥𝐨𝐰 𝐛𝐮𝐭𝐭𝐨𝐧 𝐟𝐨𝐫 𝐭𝐡𝐞 𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝 𝐬𝐢𝐭𝐞𝐬\n\n<blockquote>Dᴏᴡɴʟᴏᴀᴅɪɴɢ 18+ sᴜᴄʜ ᴀs Pᴏʀɴ, ᴜʟʟᴜ ᴀʀᴇ ᴀʟʟᴏᴡᴇᴅ (ɴᴏ R@ᴘᴇ ᴏʀ ᴄᴘ, ɪғ ғᴏᴜɴᴅ ᴘᴇʀᴍᴀɴᴇɴᴛ ʙᴀɴ 🚫)</blockquote>\n𝘉𝘰𝘵 𝘶𝘱𝘵𝘪𝘮𝘦: ⏰"
+    unauth_start = "𝙷𝚎𝚕𝚕𝚘 𝚝𝚑𝚎𝚛𝚎!\n\n𝐈'𝐦 𝐚𝐧 𝐚𝐝𝐯𝐚𝐧𝐜𝐞 𝐘𝐭𝐝𝐥 𝐛𝐨𝐭 𝐜𝐫𝐞𝐚𝐭𝐞𝐝 𝐛𝐲 <a href='http://t.me/The_TGguy'>𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐆𝐮𝐲!!</a>. 𝐈 𝐜𝐚𝐧 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐖𝐞𝐛𝐬𝐢𝐭𝐞𝐬 𝐰𝐡𝐢𝐜𝐡 𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐬 𝐲𝐭𝐝𝐥! 𝐂𝐡𝐞𝐜𝐤 𝐭𝐡𝐞 𝐛𝐞𝐥𝐨𝐰 𝐛𝐮𝐭𝐭𝐨𝐧 𝐟𝐨𝐫 𝐭𝐡𝐞 𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝 𝐬𝐢𝐭𝐞𝐬\n\n<blockquote>Dᴏᴡɴʟᴏᴀᴅɪɴɢ 18+ sᴜᴄʜ ᴀs Pᴏʀɴ, ᴜʟʟᴜ ᴀʀᴇ ᴀʟʟᴏᴡᴇᴅ (ɴᴏ R@ᴘᴇ ᴏʀ ᴄᴘ, ɪғ ғᴏᴜɴᴅ ᴘᴇʀᴍᴀɴᴇɴᴛ ʙᴀɴ 🚫)</blockquote>\n𝘉𝘰𝘵 𝘶𝘱𝘵𝘪𝘮𝘦: ⏰"
     sbutton = InlineKeyboardMarkup(
         [
             [
@@ -34,7 +34,7 @@ async def start(client, message):
                 InlineKeyboardButton("❄️ 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 ❄️", url="t.me/Itsme123i")
             ]
             [
-            InlineKeyboardButton("📜 𝐒𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝 𝐬𝐢𝐭𝐞𝐬 📜", url="https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md")
+                InlineKeyboardButton("📜 𝐒𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝 𝐬𝐢𝐭𝐞𝐬 📜", url="https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md")
             ]
         ]
     )    
