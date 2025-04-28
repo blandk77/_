@@ -6,29 +6,29 @@ nsfw_keywords = [
     "child porn",
 ]
 
-mirror = """<i><b>Mirror Disabled in the bot</b></i>"""
+mirror = """<blockquote><i><b>Mirror Disabled in the bot</b></i></blockquote>"""
 
-yt = """<b>Send link along with command line</b>:
+yt = """<blockquote><b>Send link along with command line</b>:
 
 /cmd link
 <b>By replying to link</b>:
 /cmd -n new name -z password -opt x:y|x1:y1
 
 Check here all supported <a href='https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md'>SITES</a>
-Check all yt-dlp api options from this <a href='https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/YoutubeDL.py#L212'>FILE</a> or use this <a href='https://t.me/mltb_official_channel/177'>script</a> to convert cli arguments to api options."""
+Check all yt-dlp api options from this <a href='https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/YoutubeDL.py#L212'>FILE</a> or use this <a href='https://t.me/mltb_official_channel/177'>script</a> to convert cli arguments to api options.</blockquote>"""
 
-clone = """<blockquote><i><b>Clone Disabled in the bot</b></i>"""
+clone = """<blockquote><i><b>Clone Disabled in the bot</b></i></blockquote>"""
 
-new_name = """<b>New Name</b>: -n
+new_name = """<blockquote><b>New Name</b>: -n
 
 /cmd link -n new name
-Note: Doesn't work with torrents"""
+Note: Doesn't work with torrents</blockquote>"""
 
-multi_link = """<b>Multi links only by replying to first link/file</b>: -i
+multi_link = """<blockquote><b>Multi links only by replying to first link/file</b>: -i
 
-/cmd -i 10(number of links/files)"""
+/cmd -i 10(number of links/files)</blockquote>"""
 
-same_dir = """<b>Move file(s)/folder(s) to new folder</b>: -m
+same_dir = """<blockquote><b>Move file(s)/folder(s) to new folder</b>: -m
 
 You can use this arg also to move multiple links/torrents contents to the same directory, so all links will be uploaded together as one task
 
@@ -47,19 +47,19 @@ link6
 so link1 and link2 content will be uploaded from same folder which is folder1
 link3 and link4 content will be uploaded from same folder also which is folder2
 link5 will uploaded alone inside new folder named folder3
-link6 will get uploaded normally alone
+link6 will get uploaded normally alone</blockquote>
 """
 
-thumb = """<b>Thumbnail for current task</b>: -t
+thumb = """<blockquote><b>Thumbnail for current task</b>: -t
 
 /cmd link -t tg-message-link (doc or photo) or none (file without thumb)"""
 
-split_size = """<b>Split size for current task</b>: -sp
+split_size = """</blockquote><b>Split size for current task</b>: -sp
 
 /cmd link -sp (500mb or 2gb or 4000000000)
-Note: Only mb and gb are supported or write in bytes without unit!"""
+Note: Only mb and gb are supported or write in bytes without unit!</blockquote>"""
 
-upload = """<b>Upload Destination</b>: -up
+upload = """<blockquote><b>Upload Destination</b>: -up
 
 /cmd link -up rcl/gdl (rcl: to select rclone config, remote & path | gdl: To select token.pickle, gdrive id) using buttons
 You can directly add the upload path: -up remote:dir/subdir or -up Gdrive_id or -up id/username (telegram) or -up id/username|topic_id (telegram)
@@ -78,10 +78,10 @@ when you should use b:(leech by bot)? When your default settings is leech by use
 -up id/@username|topic_id(leech in specific chat and topic) add | without space and write topic id after chat id or username.
 
 In case you want to specify whether using token.pickle or service accounts you can add tp:gdrive_id (using token.pickle) or sa:gdrive_id (using service accounts) or mtp:gdrive_id (using token.pickle uploaded from usetting).
-DEFAULT_UPLOAD doesn't affect on leech cmds.
+DEFAULT_UPLOAD doesn't affect on leech cmds.</blockquote>
 """
 
-user_download = """<b>User Download</b>: link
+user_download = """<blockquote><b>User Download</b>: link
 
 /cmd tp:link to download using owner token.pickle incase service account enabled.
 /cmd sa:link to download using service account incase service account disabled.
@@ -89,15 +89,15 @@ user_download = """<b>User Download</b>: link
 /cmd sa:gdrive_id to download using service account and file_id incase service account disabled.
 /cmd mtp:gdrive_id or mtp:link to download using user token.pickle uploaded from usetting
 /cmd mrcc:remote:path to download using user rclone config uploaded from usetting
-you can simply edit upload using owner/user token/config from usetting without adding mtp: or mrcc: before the path/id"""
+you can simply edit upload using owner/user token/config from usetting without adding mtp: or mrcc: before the path/id</blockquote>"""
 
-rcf = """<b>Rclone Flags</b>: -rcf
+rcf = """<blockquote><b>Rclone Flags</b>: -rcf
 
 /cmd link|path|rcl -up path|rcl -rcf --drive-starred-only|key|key:value
 This will override all other flags except --exclude
-Check here all <a href='https://rclone.org/flags/'>RcloneFlags</a>."""
+Check here all <a href='https://rclone.org/flags/'>RcloneFlags</a>.</blockquote>"""
 
-bulk = """<b>Bulk Download</b>: -b
+bulk = """<blockquote><b>Bulk Download</b>: -b
 
 Bulk can be used only by replying to text message or text file contains links separated by new line.
 Example:
@@ -110,89 +110,89 @@ Note: Any arg along with the cmd will be setted to all links
 /cmd -b -up remote: -z -m folder name (all links contents in one zipped folder uploaded to one destination)
 so you can't set different upload destinations along with link incase you have added -m along with cmd
 You can set start and end of the links from the bulk like seed, with -b start:end or only end by -b :end or only start by -b start.
-The default start is from zero(first link) to inf."""
+The default start is from zero(first link) to inf.</blockquote>"""
 
-rlone_dl = """<b>Rclone Download</b>:
+rlone_dl = """<blockquote><b>Rclone Download</b>:
 
 Treat rclone paths exactly like links
 /cmd main:dump/ubuntu.iso or rcl(To select config, remote and path)
 Users can add their own rclone from user settings
 If you want to add path manually from your config add mrcc: before the path without space
 /cmd mrcc:main:dump/ubuntu.iso
-You can simply edit using owner/user config from usetting without adding mrcc: before the path"""
+You can simply edit using owner/user config from usetting without adding mrcc: before the path</blockquote>"""
 
-extract_zip = """<b>Extract/Zip</b>: -e -z
+extract_zip = """<blockquote><b>Extract/Zip</b>: -e -z
 
 /cmd link -e password (extract password protected)
 /cmd link -z password (zip password protected)
 /cmd link -z password -e (extract and zip password protected)
-Note: When both extract and zip added with cmd it will extract first and then zip, so always extract first"""
+Note: When both extract and zip added with cmd it will extract first and then zip, so always extract first</blockquote>"""
 
-join = """<b>Join Splitted Files</b>: -j
+join = """<blockquote><b>Join Splitted Files</b>: -j
 
 This option will only work before extract and zip, so mostly it will be used with -m argument (samedir)
 By Reply:
 /cmd -i 3 -j -m folder name
 /cmd -b -j -m folder name
 if u have link(folder) have splitted files:
-/cmd link -j"""
+/cmd link -j</blockquote>"""
 
-tg_links = """<i><b>Disabled in the bot</b></i>"""
+tg_links = """<blockquote><i><b>Disabled in the bot</b></i></blockquote>"""
 
-sample_video = """<b>Sample Video</b>: -sv
+sample_video = """<blockquote><b>Sample Video</b>: -sv
 
 Create sample video for one video or folder of videos.
 /cmd -sv (it will take the default values which 60sec sample duration and part duration is 4sec).
-You can control those values. Example: /cmd -sv 70:5(sample-duration:part-duration) or /cmd -sv :5 or /cmd -sv 70."""
+You can control those values. Example: /cmd -sv 70:5(sample-duration:part-duration) or /cmd -sv :5 or /cmd -sv 70.</blockquote>"""
 
-screenshot = """<b>ScreenShots</b>: -ss
+screenshot = """<blockquote><b>ScreenShots</b>: -ss
 
 Create screenshots for one video or folder of videos.
 /cmd -ss (it will take the default values which is 10 photos).
-You can control this value. Example: /cmd -ss 6."""
+You can control this value. Example: /cmd -ss 6.</blockquote>"""
 
-seed = """<i><b>Disabled in the bot</b></i>"""
+seed = """<blockquote><i><b>Disabled in the bot</b></i></blockquote>"""
 
-zip_arg = """<b>Zip</b>: -z password
+zip_arg = """<blockquote><b>Zip</b>: -z password
 
 /cmd link -z (zip)
-/cmd link -z password (zip password protected)"""
+/cmd link -z password (zip password protected)</blockquote>"""
 
-qual = """<b>Quality Buttons</b>: -s
+qual = """<blockquote><b>Quality Buttons</b>: -s
 
 In case default quality added from yt-dlp options using format option and you need to select quality for specific link or links with multi links feature.
-/cmd link -s"""
+/cmd link -s</blockquote>"""
 
-yt_opt = """<b>Options</b>: -opt
+yt_opt = """<blockquote><b>Options</b>: -opt
 
 /cmd link -opt {"format": "bv*+mergeall[vcodec=none]", "nocheckcertificate": True, "playliststart": 10, "fragment_retries": float("inf"), "matchtitle": "S13", "writesubtitles": True, "live_from_start": True, "postprocessor_args": {"ffmpeg": ["-threads", "4"]}, "wait_for_video": (5, 100), "download_ranges": [{"start_time": 0, "end_time": 10}]}
-Check all yt-dlp api options from this <a href='https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/YoutubeDL.py#L184'>FILE</a> or use this <a href='https://t.me/mltb_official_channel/177'>script</a> to convert cli arguments to api options."""
+Check all yt-dlp api options from this <a href='https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/YoutubeDL.py#L184'>FILE</a> or use this <a href='https://t.me/mltb_official_channel/177'>script</a> to convert cli arguments to api options.</blockquote>"""
 
-convert_media = """<b>Convert Media</b>: -ca -cv
+convert_media = """<blockquote><b>Convert Media</b>: -ca -cv
 /cmd link -ca mp3 -cv mp4 (convert all audios to mp3 and all videos to mp4)
 /cmd link -ca mp3 (convert all audios to mp3)
 /cmd link -cv mp4 (convert all videos to mp4)
 /cmd link -ca mp3 + flac ogg (convert only flac and ogg audios to mp3)
-/cmd link -cv mkv - webm flv (convert all videos to mp4 except webm and flv)"""
+/cmd link -cv mkv - webm flv (convert all videos to mp4 except webm and flv)</blockquote>"""
 
-force_start = """<b>Force Start</b>: -f -fd -fu
+force_start = """<blockquote><b>Force Start</b>: -f -fd -fu
 /cmd link -f (force download and upload)
 /cmd link -fd (force download only)
-/cmd link -fu (force upload directly after download finish)"""
+/cmd link -fu (force upload directly after download finish)</blockquote>"""
 
-gdrive = """<b>Gdrive</b>: link
+gdrive = """<blockquote><b>Gdrive</b>: link
 If DEFAULT_UPLOAD is `rc` then you can pass up: `gd` to upload using gdrive tools to GDRIVE_ID.
 /cmd gdriveLink or gdl or gdriveId -up gdl or gdriveId or gd
 /cmd tp:gdriveLink or tp:gdriveId -up tp:gdriveId or gdl or gd (to use token.pickle if service account enabled)
 /cmd sa:gdriveLink or sa:gdriveId -p sa:gdriveId or gdl or gd (to use service account if service account disabled)
 /cmd mtp:gdriveLink or mtp:gdriveId -up mtp:gdriveId or gdl or gd(if you have added upload gdriveId from usetting) (to use user token.pickle that uploaded by usetting)
-You can simply edit using owner/user token from usetting without adding mtp: before the id"""
+You can simply edit using owner/user token from usetting without adding mtp: before the id</blockquote>"""
 
-rclone_cl = """<b>Rclone</b>: path
+rclone_cl = """<blockquote><b>Rclone</b>: path
 If DEFAULT_UPLOAD is `gd` then you can pass up: `rc` to upload to RCLONE_PATH.
 /cmd rcl/rclone_path -up rcl/rclone_path/rc -rcf flagkey:flagvalue|flagkey|flagkey:flagvalue
 /cmd rcl or rclone_path -up rclone_path or rc or rcl
-/cmd mrcc:rclone_path -up rcl or rc(if you have add rclone path from usetting) (to use user config)"""
+/cmd mrcc:rclone_path -up rcl or rc(if you have add rclone path from usetting) (to use user config)</blockquote>"""
 
 name_sub = r"""<b>Name Substitution</b>: -ns
 
@@ -202,28 +202,28 @@ name_sub = r"""<b>Name Substitution</b>: -ns
 This will affect on all files. Format: wordToReplace/wordToReplaceWith/sensitiveCase
 Word Subtitions. You can add pattern instead of normal text. Timeout: 60 sec
 NOTE: You must add \ before any character, those are the characters: \^$.|?*+()[]{}-
-1. script will get replaced by code with sensitive case
+<blockquote>1. script will get replaced by code with sensitive case
 2. mirror will get replaced by leech
 4. tea will get replaced by space with sensitive case
 5. clone will get removed
 6. cpu will get replaced by space
 7. [hello] will get replaced by hello
-8. \text\ will get replaced by text with sensitive case
+8. \text\ will get replaced by text with sensitive case</blockquote>
 """
 
-transmission = """<b>Tg transmission</b>: -hl -ut -bt
+transmission = """<blockquote><b>Tg transmission</b>: -hl -ut -bt
 /cmd link -hl (leech by user and bot session with respect to size) (Hybrid Leech)
 /cmd link -bt (leech by bot session)
-/cmd link -ut (leech by user)"""
+/cmd link -ut (leech by user)</blockquote>"""
 
-thumbnail_layout = """Thumbnail Layout: -tl
-/cmd link -tl 3x3 (widthxheight) 3 photos in row and 3 photos in column"""
+thumbnail_layout = """<blockquote>Thumbnail Layout: -tl
+/cmd link -tl 3x3 (widthxheight) 3 photos in row and 3 photos in column</blockquote>"""
 
-leech_as = """<b>Leech as</b>: -doc -med
+leech_as = """<blockquote><b>Leech as</b>: -doc -med
 /cmd link -doc (Leech as document)
-/cmd link -med (Leech as media)"""
+/cmd link -med (Leech as media)</blockquote>"""
 
-leech_filename = """<b>Leech Filename</b>:
+leech_filename = """<blockquote><b>Leech Filename</b>:
 
 Set a global filename template for all your leech files. The template supports dynamic variables like {season}, {episode}, and {quality}.
 
@@ -233,9 +233,9 @@ This will rename all files to follow this pattern, automatically replacing the v
 
 You can set this in your user settings by going to /usettings > Leech Settings > Leech Filename.
 
-Note: Leech Caption still takes priority for display purposes, but this affects the actual filename of the files."""
+Note: Leech Caption still takes priority for display purposes, but this affects the actual filename of the files.</blockquote>"""
 
-font_styles = """<b>Font Styles</b>:
+font_styles = """<blockquote><b>Font Styles</b>:
 Use the /fonts or /fontstyles command to see available font styles for leech.
 
 <b>Three Types of Font Styling:</b>
@@ -419,7 +419,7 @@ Example: {{filename}🔥}</blockquote>
 • Google Fonts support depends on the rendering capabilities of the device
 • HTML formatting is the most compatible across all devices
 • Font styles are applied after template variables are processed
-• User settings take priority over owner settings"""
+• User settings take priority over owner settings</blockquote>"""
 
 ffmpeg_cmds = """<b>FFmpeg Commands</b>: -ff
 
@@ -427,14 +427,14 @@ ffmpeg_cmds = """<b>FFmpeg Commands</b>: -ff
 
 list of lists of ffmpeg commands. You can set multiple ffmpeg commands for all files before upload. Don't write ffmpeg at beginning, start directly with the arguments.
 Notes:
-1. Add <code>-del</code> to the list(s) which you want from the bot to delete the original files after command run complete!
+<blockquote>1. Add <code>-del</code> to the list(s) which you want from the bot to delete the original files after command run complete!
 2. To execute one of pre-added lists in bot like: ({"subtitle": ["-i mltb.mkv -c copy -c:s srt mltb.mkv"]}), you must use -ff subtitle (list key)
 Examples: ["-i mltb.mkv -c copy -c:s srt mltb.mkv", "-i mltb.video -c copy -c:s srt mltb", "-i mltb.m4a -c:a libmp3lame -q:a 2 mltb.mp3", "-i mltb.audio -c:a libmp3lame -q:a 2 mltb.mp3", "-i mltb -map 0:a -c copy mltb.mka -map 0:s -c copy mltb.srt"]
 Here I will explain how to use mltb.* which is reference to files you want to work on.
 1. First cmd: the input is mltb.mkv so this cmd will work only on mkv videos and the output is mltb.mkv also so all outputs is mkv. -del will delete the original media after complete run of the cmd.
 2. Second cmd: the input is mltb.video so this cmd will work on all videos and the output is only mltb so the extenstion is same as input files.
 3. Third cmd: the input in mltb.m4a so this cmd will work only on m4a audios and the output is mltb.mp3 so the output extension is mp3.
-4. Fourth cmd: the input is mltb.audio so this cmd will work on all audios and the output is mltb.mp3 so the output extension is mp3."""
+4. Fourth cmd: the input is mltb.audio so this cmd will work on all audios and the output is mltb.mp3 so the output extension is mp3.</blockquote>"""
 
 YT_HELP_DICT = {
     "main": yt,
@@ -505,7 +505,7 @@ CLONE_HELP_DICT = {
 }
 
 RSS_HELP_MESSAGE = """
-Use this format to add feed url:
+<blockquote>Use this format to add feed url:
 Title1 link (required)
 Title2 link -c cmd -inf xx -exf xx
 Title3 link -c cmd -d ratio:time -z password
@@ -539,14 +539,14 @@ Filter Notes:
 2. Add `or` between similar keys, you can add it between qualities or between extensions, so don't add filter like this f: 1080|mp4 or 720|web because this will parse 1080 and (mp4 or 720) and web ... not (1080 and mp4) or (720 and web).
 3. You can add `or` and `|` as much as you want.
 4. Take a look at the title if it has a static special character after or before the qualities or extensions or whatever and use them in the filter to avoid wrong match.
-Timeout: 60 sec.
+Timeout: 60 sec.</blockquote>
 """
 
 PASSWORD_ERROR_MESSAGE = """
 <b>This link requires a password!</b>
 - Insert <b>::</b> after the link and write the password after the sign.
 
-<b>Example:</b> link::my password
+<blockquote><b>Example:</b> link::my password</blockquote>
 """
 
 
@@ -684,7 +684,7 @@ media_tools_text = {
 }
 
 help_string = f"""
-**NOTE: Try each command without any argument to see more detalis.**
+<blockquote>**NOTE: Try each command without any argument to see more detalis.**
 /{BotCommands.YtdlCommand[0]} or /{BotCommands.YtdlCommand[1]}: __Mirror yt-dlp supported link.__
 /{BotCommands.YtdlLeechCommand[0]} or /{BotCommands.YtdlLeechCommand[1]}: __Leech yt-dlp supported link.__
 /{BotCommands.MediaInfoCommand[0]} or /{BotCommands.MediaInfoCommand[1]}: __Get MediaInfo from telegram file or direct link.__
@@ -699,5 +699,5 @@ help_string = f"""
 /{BotCommands.StatsCommand}: __Show stats of the machine where the bot is hosted in.__
 /{BotCommands.IMDBCommand}: __Search for movies or TV series info on IMDB.__
 /{BotCommands.LoginCommand}: __Login to the bot using password for permanent access [Without Token verification].__
-/{BotCommands.RssCommand}: __[Owner Only] Subscribe to RSS feeds. Supports easy subscription to movie websites (movierulz, tamilmv, tamilblasters) with auto domain detection and site name display.__
+/{BotCommands.RssCommand}: __[Owner Only] Subscribe to RSS feeds. Supports easy subscription to movie websites (movierulz, tamilmv, tamilblasters) with auto domain detection and site name display.__</blockquote>
 """
