@@ -43,29 +43,37 @@ async def bot_stats(_, message):
     swap = swap_memory()
     memory = virtual_memory()
     stats = f"""
-<b>Commit Date:</b> {commands["commit"]}
+
+<b>Repository Commit Date:</b> {commands["commit"]}
 
 <b>Bot Uptime:</b> {get_readable_time(time() - bot_start_time)}
-<b>OS Uptime:</b> {get_readable_time(time() - boot_time())}
 
-<b>Total Disk Space:</b> {get_readable_file_size(total)}
-<b>Used:</b> {get_readable_file_size(used)} | <b>Free:</b> {get_readable_file_size(free)}
-
-<b>Upload:</b> {get_readable_file_size(net_io_counters().bytes_sent)}
-<b>Download:</b> {get_readable_file_size(net_io_counters().bytes_recv)}
-
+<u>𝐒𝐞𝐫𝐯𝐞𝐫 𝐈𝐧𝐟𝐨</u>:
+<blockquote expandable>
 <b>CPU:</b> {cpu_percent(interval=0.5)}%
 <b>RAM:</b> {memory.percent}%
+<b>SWAP:</b> {get_readable_file_size(swap.total)}
 <b>DISK:</b> {disk}%
 
-<b>Physical Cores:</b> {cpu_count(logical=False)}
 <b>Total Cores:</b> {cpu_count()}
-<b>SWAP:</b> {get_readable_file_size(swap.total)} | <b>Used:</b> {swap.percent}%
-
+<b>Physical Cores:</b> {cpu_count(logical=False)}
 <b>Memory Total:</b> {get_readable_file_size(memory.total)}
+<b>Total Disk Space:</b> {get_readable_file_size(total)}
+
+<b>SWAP Used:</b> {swap.percent}%
+<b>Disk space Used:</b> {get_readable_file_size(used)}  
+<b>Disk space Free:</b> {get_readable_file_size(free)}
 <b>Memory Free:</b> {get_readable_file_size(memory.available)}
 <b>Memory Used:</b> {get_readable_file_size(memory.used)}
 
+<b>Upload:</b> {get_readable_file_size(net_io_counters().bytes_sent)}
+<b>Download:</b> {get_readable_file_size(net_io_counters().bytes_recv)}
+<b>OS Uptime:</b> {get_readable_time(time() - boot_time())}
+
+</blockquote>
+
+<u>𝐕𝐞𝐫𝐢𝐬𝐨𝐧𝐬</u>:
+<blockquote expandable>
 <b>python:</b> {commands["python"]}
 <b>aria2:</b> {commands["aria2"]}
 <b>qBittorrent:</b> {commands["qBittorrent"]}
@@ -73,7 +81,9 @@ async def bot_stats(_, message):
 <b>rclone:</b> {commands["rclone"]}
 <b>yt-dlp:</b> {commands["yt-dlp"]}
 <b>ffmpeg:</b> {commands["ffmpeg"]}
-<b>7z:</b> {commands["7z"]}
+<b>7z:</b> {commands["7z"]}</blockquote>
+
+𝙰 𝚋𝚘𝚝 𝚋𝚢 <a href="https://t.me/The_TGguy">𝑇𝑒𝑙𝑒𝑔𝑟𝑎𝑚 𝐺𝑢𝑦!!</a>
 """
     # Delete the /stats command message immediately
     await delete_links(message)
