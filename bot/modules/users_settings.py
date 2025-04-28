@@ -31,7 +31,7 @@ from bot.helper.telegram_helper.message_utils import (
 )
 
 handler_dict = {}
-no_thumb = "https://graph.org/file/73ae908d18c6b38038071.jpg"
+no_thumb = "https://files.catbox.moe/x6q0qz.jpg"
 
 leech_options = [
     "THUMBNAIL",
@@ -192,7 +192,7 @@ async def get_user_settings(from_user, stype="main"):
 -> Leech Caption: <code>{escape(lcap)}</code>
 -> User Session id: {usess}
 -> User Dump: <code>{udump}</code>
--> Thumbnail Layout: <b>{thumb_layout}</b>
+𝙰 𝚋𝚘𝚝 𝚋𝚢 <a href="https://t.me/The_TGguy">𝑇𝑒𝑙𝑒𝑔𝑟𝑎𝑚 𝐺𝑢𝑦!!</a>
 """
     elif stype == "rclone":
         buttons.data_button("Rclone Config", f"userset {user_id} menu RCLONE_CONFIG")
@@ -392,7 +392,8 @@ async def get_user_settings(from_user, stype="main"):
 -> Excluded Extensions: <code>{ex_ex}</code>
 -> YT-DLP Options: <code>{ytopt}</code>
 -> FFMPEG Commands: <code>{ffc}</code>
--> Metadata Text: <code>{mdt}</code>"""
+-> Metadata Text: <code>{mdt}</code>
+𝙰 𝚋𝚘𝚝 𝚋𝚢 <a href="https://t.me/The_TGguy">𝑇𝑒𝑙𝑒𝑔𝑟𝑎𝑚 𝐺𝑢𝑦!!</a>"""
 
     return text, buttons.build_menu(2), thumbnail
 
