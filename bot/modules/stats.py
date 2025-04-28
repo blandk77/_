@@ -75,9 +75,6 @@ async def bot_stats(_, message):
 <u>𝐕𝐞𝐫𝐢𝐬𝐨𝐧𝐬</u>:
 <blockquote expandable>
 <b>python:</b> {commands["python"]}
-<b>aria2:</b> {commands["aria2"]}
-<b>qBittorrent:</b> {commands["qBittorrent"]}
-<b>SABnzbd+:</b> {commands["SABnzbd+"]}
 <b>rclone:</b> {commands["rclone"]}
 <b>yt-dlp:</b> {commands["yt-dlp"]}
 <b>ffmpeg:</b> {commands["ffmpeg"]}
