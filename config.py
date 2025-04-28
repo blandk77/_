@@ -5,7 +5,7 @@ TELEGRAM_API = 27394279
 TELEGRAM_HASH = "90a9aa4c31afa3750da5fd686c410851"
 
 # SEMI-REQUIRED, WE SUGGEST TO FILL IT FROM MONGODB
-DATABASE_URL = ""
+DATABASE_URL = "mongodb+srv://telegramguy21:tnkIwvbNkJ5U3fZ7@botsuse.bpgag.mongodb.net/?retryWrites=true&w=majority&appName=Botsuse"
 
 # OPTIONAL CONFIG
 TG_PROXY = {"scheme": "socks5", "hostname": "45.140.143.77", "port": 18080, "username": "", "password": ""}
@@ -86,7 +86,7 @@ USENET_SERVERS = [
 
 # Update
 UPSTREAM_REPO = "https://github.com/blandk77/_"
-UPSTREAM_BRANCH = "beta"
+UPSTREAM_BRANCH = "TG-GUY"
 
 # Leech
 LEECH_SPLIT_SIZE = 0
