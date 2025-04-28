@@ -2,9 +2,8 @@ from asyncio import create_task
 from html import escape
 from time import monotonic, time
 from uuid import uuid4
-
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiofiles import open as aiopen
-
 from bot import LOGGER, user_data
 from bot.core.aeon_client import TgClient
 from bot.core.config_manager import Config
@@ -89,9 +88,16 @@ async def start(client, message):
     elif await CustomFilters.authorized(client, message):
         help_command = f"/{BotCommands.HelpCommand}"
         start_string = f"This bot can mirror all your links|files|torrents to Google Drive or any rclone cloud or to telegram.\n<b>Type {help_command} to get a list of available commands</b>"
-        await send_message(message, start_string)
+        unauth_start = "who are you?"
+        sbutton = InlineKeyboardMarkup(
+            [
+                [InlineKeyboardButton("Updates", url="https://t.me/The_TGguy"),
+                 Inlinekeyboardbutton("Owner", url="t.me/Itsme123i")]  
+            ]
+        )
+        await send_message(message, start_string, reply_markup=sbutton)
     else:
-        await send_message(message, "You are not a authorized user!")
+        await send_message(message, unauth_start, reply_markup=sbutton)
 
     # Safely update PM users database
     if message.from_user and hasattr(message.from_user, "id"):
