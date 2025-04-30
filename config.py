@@ -8,12 +8,12 @@ TELEGRAM_HASH = "90a9aa4c31afa3750da5fd686c410851"
 DATABASE_URL = "mongodb+srv://python21java:8ZFGYMKJCqAPwsiO@filestore.f876hjv.mongodb.net/?retryWrites=true&w=majority&appName=Filestore"
 
 # OPTIONAL CONFIG
-TG_PROXY = {"scheme": "socks5", "hostname": "45.140.143.77", "port": 18080, "username": "", "password": ""}
+TG_PROXY = {}
 USER_SESSION_STRING = ""
 DOWNLOAD_DIR = "/usr/src/app/downloads/"
 CMD_SUFFIX = ""
 AUTHORIZED_CHATS = ""
-SUDO_USERS = ""
+SUDO_USERS = "7465574522"
 DEFAULT_UPLOAD = "rc"
 FILELION_API = ""
 STREAMWISH_API = ""
@@ -32,7 +32,7 @@ TOKEN_TIMEOUT = 0
 LOGIN_PASS = ""  # Set a password to enable login feature
 PAID_CHANNEL_ID = 0
 PAID_CHANNEL_LINK = ""
-SET_COMMANDS = True
+SET_COMMANDS = False
 METADATA_KEY = ""
 LOG_CHAT_ID = -1002415859244
 LEECH_FILENAME_CAPTION = ""
@@ -120,7 +120,7 @@ FFMPEG_CPU_AFFINITY = (
 FFMPEG_DYNAMIC_THREADS = True  # Dynamically adjust thread count based on system load
 
 # Auto Restart Settings
-AUTO_RESTART_ENABLED = False  # Enable/disable automatic bot restart
+AUTO_RESTART_ENABLED = True  # Enable/disable automatic bot restart
 AUTO_RESTART_INTERVAL = 24  # Restart interval in hours
 
 # RSS
