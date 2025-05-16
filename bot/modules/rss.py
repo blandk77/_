@@ -1268,8 +1268,8 @@ async def rss_monitor():
                                 )
                                 site_name = "Unknown"
 
-                    site_info = f" | <b>Site:</b> <code>{site_name}</code>"
-                    feed_msg += f"\n<b>Tag: </b><code>{data['tag']}</code> <code>{user}</code>{site_info}"
+                    site_info = f" | <b>Site:</b> <code>None</code>"
+                    feed_msg += f"\n<b>Tag: </b><code>{data['tag']}</code> <code>{user}</code>"
 
                     # Validate message content before sending
                     if not feed_msg.strip():
