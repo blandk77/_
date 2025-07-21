@@ -36,3 +36,4 @@ yt-dlp[default,curl-cffi]
 Flask
 werkzeug
 itsdangerous
+pyrofork
